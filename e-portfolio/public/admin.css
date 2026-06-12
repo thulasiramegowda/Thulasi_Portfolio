@@ -1,0 +1,510 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0D0D0D;
+  color: #FFFFFF;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  background: #1A1A1A;
+  border-right: 1px solid #2A2A2A;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-header h2 span {
+  color: #F5C542;
+}
+
+.sidebar-header p {
+  font-size: 0.7rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.nav-btn {
+  background: transparent;
+  border: none;
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-radius: 12px;
+  color: #B0B0B0;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  transition: all 0.2s;
+}
+
+.nav-btn i {
+  width: 24px;
+  color: #F5C542;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  background: #2A2A2A;
+  color: #FFFFFF;
+}
+
+.view-site {
+  background: #F5C542;
+  color: #1A1A1A;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+}
+
+.view-site:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Main Content */
+.admin-main {
+  margin-left: 280px;
+  min-height: 100vh;
+  background: #0D0D0D;
+}
+
+/* Login Screen */
+.login-screen {
+  position: fixed;
+  top: 0;
+  left: 280px;
+  right: 0;
+  bottom: 0;
+  background: #0D0D0D;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.login-card {
+  background: #1A1A1A;
+  padding: 2.5rem;
+  border-radius: 24px;
+  width: 380px;
+  text-align: center;
+  border: 1px solid #2A2A2A;
+}
+
+.login-icon {
+  width: 60px;
+  height: 60px;
+  background: #F5C542;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+}
+
+.login-icon i {
+  font-size: 1.5rem;
+  color: #1A1A1A;
+}
+
+.login-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.login-card p {
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: #2A2A2A;
+  border: 1px solid #3A3A3A;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: inherit;
+}
+
+.login-input:focus {
+  outline: none;
+  border-color: #F5C542;
+}
+
+.login-btn {
+  width: 100%;
+  background: #F5C542;
+  color: #1A1A1A;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.login-btn:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.error-text {
+  color: #FF6B6B;
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+/* Admin Content */
+.admin-content {
+  padding: 2rem;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #2A2A2A;
+}
+
+.admin-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.logout-btn {
+  background: #FF6B6B;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+/* Section Panels */
+.section-panel {
+  display: none;
+}
+
+.section-panel.active {
+  display: block;
+}
+
+.panel-header {
+  margin-bottom: 1.5rem;
+}
+
+.panel-header h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.panel-header p {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.card {
+  background: #1A1A1A;
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 1px solid #2A2A2A;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #F5C542;
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2A2A2A;
+  border: 1px solid #3A3A3A;
+  border-radius: 12px;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: 0.85rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: #F5C542;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.3rem;
+  color: #888;
+  font-size: 0.65rem;
+}
+
+.save-btn, .add-btn {
+  background: #F5C542;
+  color: #1A1A1A;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.save-btn:hover, .add-btn:hover {
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* Items List */
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.list-item {
+  background: #1A1A1A;
+  border-radius: 16px;
+  padding: 1rem;
+  border: 1px solid #2A2A2A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-item-info h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.list-item-info p {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.list-item-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.edit-btn, .delete-btn {
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.edit-btn {
+  background: #F5C542;
+  color: #1A1A1A;
+}
+
+.delete-btn {
+  background: #FF6B6B;
+  color: #FFFFFF;
+}
+
+/* Semester Form */
+.semesters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.semester-field {
+  background: #2A2A2A;
+  padding: 0.8rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.semester-field label {
+  display: block;
+  font-size: 0.7rem;
+  color: #F5C542;
+  margin-bottom: 0.3rem;
+}
+
+.semester-field input {
+  width: 100%;
+  padding: 0.4rem;
+  background: #1A1A1A;
+  border: 1px solid #3A3A3A;
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: #1A1A1A;
+  border-radius: 24px;
+  padding: 2rem;
+  width: 500px;
+  max-width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  border: 1px solid #2A2A2A;
+}
+
+.modal-content h3 {
+  margin-bottom: 1rem;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+  transition: color 0.2s;
+}
+
+.close:hover {
+  color: #F5C542;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.modal-cancel {
+  background: #2A2A2A;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    padding: 1rem;
+  }
+  
+  .sidebar-header h2, .sidebar-header p, .nav-btn span, .view-site span {
+    display: none;
+  }
+  
+  .nav-btn i {
+    margin: 0;
+  }
+  
+  .admin-main {
+    margin-left: 80px;
+  }
+  
+  .login-screen {
+    left: 80px;
+  }
+  
+  .semesters-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.backup-btn {
+  background: #2A2A2A;
+  color: #F5C542;
+  border: 1px solid #F5C542;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.backup-btn:hover {
+  background: #F5C542;
+  color: #151515;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+}

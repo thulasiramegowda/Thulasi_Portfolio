@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="admin.css"> <!-- Assuming a separate admin CSS -->
+</head>
+<body>
+
+<div id="loginScreen" class="admin-login-screen">
+  <div class="admin-login-form">
+    <div class="login-icon"><i class="fas fa-lock"></i></div>
+    <h4>Admin Access</h4>
+    <p>Enter password to manage content</p>
+    <input type="password" id="password" placeholder="Enter password" autocomplete="off">
+    <button onclick="login()">Login →</button>
+    <p id="loginError" class="error-msg"></p>
+  </div>
+</div>
+
+<div id="adminContent" class="admin-content" style="display:none;">
+  <aside class="admin-sidebar">
+    <div class="sidebar-header">
+      <h3>Admin Panel</h3>
+      <button class="logout-btn" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+    </div>
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" data-section="profile" onclick="showAdminDashboardSection('profile')"><i class="fas fa-user"></i> Profile</button>
+      <button class="nav-btn" data-section="identity" onclick="showAdminDashboardSection('identity')"><i class="fas fa-id-badge"></i> Identity</button>
+      <button class="nav-btn" data-section="projects" onclick="showAdminDashboardSection('projects')"><i class="fas fa-project-diagram"></i> Projects</button>
+      <button class="nav-btn" data-section="certificates" onclick="showAdminDashboardSection('certificates')"><i class="fas fa-certificate"></i> Certificates</button>
+      <button class="nav-btn" data-section="achievements" onclick="showAdminDashboardSection('achievements')"><i class="fas fa-trophy"></i> Achievements</button>
+      <button class="nav-btn" data-section="academics" onclick="showAdminDashboardSection('academics')"><i class="fas fa-graduation-cap"></i> Academics</button>
+      <button class="nav-btn" data-section="skills" onclick="showAdminDashboardSection('skills')"><i class="fas fa-code"></i> Skills & Tools</button>
+      <button class="nav-btn" data-section="social" onclick="showAdminDashboardSection('social')"><i class="fas fa-share-alt"></i> Social Links</button>
+      <button class="nav-btn" data-section="milestones" onclick="showAdminDashboardSection('milestones')"><i class="fas fa-road"></i> Engineering Journey</button>
+      <button class="nav-btn" data-section="startup" onclick="showAdminDashboardSection('startup')"><i class="fas fa-rocket"></i> Startup Journey</button>
+      <button class="nav-btn" data-section="password" onclick="showAdminDashboardSection('password')"><i class="fas fa-lock"></i> Security</button>
+      <button class="nav-btn" data-section="backup" onclick="showAdminDashboardSection('backup')"><i class="fas fa-download"></i> Backup</button>
+    </nav>
+  </aside>
+
+  <main class="admin-main-content">
+    <div id="adminEditBody">
+      <!-- Dashboard content will be loaded here by showAdminDashboard() -->
+    </div>
+  </main>
+</div>
+
+<!-- Universal Modal for CRUD operations -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="modalTitle"></h3>
+      <span class="close-modal" onclick="closeModal()">&times;</span>
+    </div>
+    <div id="modalBody" class="modal-body">
+      <!-- Form content will be loaded here -->
+    </div>
+  </div>
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+{
+  "profile": {
+    "name": "Thulasi G T",
+    "photo": "/uploads/profile/1781261562918-93620754.jpeg",
+    "bio": "CSIT student driven by curiosity, creativity, and technology.\nExploring AI, full-stack development, cloud computing, and entrepreneurship.\nBuilding meaningful projects, participating in hackathons, and learning every day.\nAn artist at heart and an engineer in progress, always seeking new challenges.\nDocumenting my journey from student to builder, creator, and future entrepreneur.",
+    "tags": [
+      "Thulasi G T > Engineer in Progress • AI Explorer • Creative Artist • Startup Enthusiast"
+    ],
+    "socials": [
+      {
+        "id": "1",
+        "platform": "github",
+        "url": "https://github.com/thulasiramegowda"
+      },
+      {
+        "id": "2",
+        "platform": "linkedin",
+        "url": "https://linkedin.com/in/thulasi-rame-gowda"
+      },
+      {
+        "id": "3",
+        "platform": "twitter",
+        "url": "https://twitter.com/thulas_21"
+      },
+      {
+        "id": "4",
+        "platform": "email",
+        "url": "mailto:thulasiramegowda29@gmail.com"
+      }
+    ]
+  },
+  "education": {
+    "currentCgpa": "9.7",
+    "currentSemester": "2",
+    "creditsCompleted": "24",
+    "sslc": {
+      "school": "Vidyanikethan School, Ramnathpura",
+      "percentage": "92%",
+      "year": "2023"
+    },
+    "puc": {
+      "college": "Lakshya PU College, Bangalore",
+      "percentage": "94%",
+      "year": "2025"
+    },
+    "btech": {
+      "university": "REVA University, Bangalore",
+      "semesters": [
+        {
+          "sem": 1,
+          "sgpa": "9.7",
+          "status": "completed"
+        },
+        {
+          "sem": 2,
+          "sgpa": "",
+          "status": "in-progress"
+        },
+        {
+          "sem": 3,
+          "sgpa": "",
+          "status": "upcoming"
+        },
+        {
+          "sem": 4,
+          "sgpa": "",
+          "status": "upcoming"
+        },
+        {
+          "sem": 5,
+          "sgpa": "",
+          "status": "upcoming"
+        },
+        {
+          "sem": 6,
+          "sgpa": "",
+          "status": "upcoming"
+        },
+        {
+          "sem": 7,
+          "sgpa": "",
+          "status": "upcoming"
+        },
+        {
+          "sem": 8,
+          "sgpa": "",
+          "status": "upcoming"
+        }
+      ]
+    }
+  },
+  "milestones": [
+    {
+      "id": "1",
+      "year": "2023",
+      "title": "SSLC Completed",
+      "description": "Successfully completed SSLC with 92% - Strong academic foundation",
+      "category": "Education",
+      "status": "completed",
+      "order": 1,
+      "icon": "fas fa-graduation-cap"
+    },
+    {
+      "id": "2",
+      "year": "2025",
+      "title": "PUC Completed",
+      "description": "Completed Pre-University education with 94% - Prepared for engineering journey",
+      "category": "Education",
+      "status": "completed",
+      "order": 2,
+      "icon": "fas fa-book"
+    },
+    {
+      "id": "3",
+      "year": "2025",
+      "title": "Joined REVA University",
+      "description": "Started BTech Engineering journey - Beginning of professional technical learning",
+      "category": "Engineering",
+      "status": "completed",
+      "order": 3,
+      "icon": "fas fa-university"
+    },
+    {
+      "id": "4",
+      "year": "2025",
+      "title": "First Programming Language",
+      "description": "Learned C Programming - Built foundational understanding of programming concepts",
+      "category": "Learning",
+      "status": "completed",
+      "order": 4,
+      "icon": "fas fa-code"
+    },
+    {
+      "id": "5",
+      "year": "2026",
+      "title": "Started Python Journey",
+      "description": "Expanded programming knowledge with Python - Explored problem solving and automation",
+      "category": "Learning",
+      "status": "completed",
+      "order": 5,
+      "icon": "fab fa-python"
+    },
+    {
+      "id": "6",
+      "year": "2026",
+      "title": "Built KrishiSetu",
+      "description": "Developed KrishiSetu project - Applied engineering skills to solve real-world problems",
+      "category": "Project",
+      "status": "completed",
+      "order": 6,
+      "icon": "fas fa-leaf"
+    },
+    {
+      "id": "7",
+      "year": "2026",
+      "title": "SpaceTech Hackathon",
+      "description": "Participated in SpaceTech Hackathon - Gained teamwork and innovation experience",
+      "category": "Hackathon",
+      "status": "completed",
+      "order": 7,
+      "icon": "fas fa-rocket"
+    },
+    {
+      "id": "8",
+      "year": "2026",
+      "title": "Gigini Internship",
+      "description": "Started internship at Gigini - Gained industry exposure and practical experience",
+      "category": "Internship",
+      "status": "in-progress",
+      "order": 8,
+      "icon": "fas fa-briefcase"
+    },
+    {
+      "id": "9",
+      "year": "Childhood",
+      "title": "Drawing Journey Started",
+      "description": "Drawing has been a passion since childhood - Developed creativity alongside technical growth",
+      "category": "Creativity",
+      "status": "ongoing",
+      "order": 9,
+      "icon": "fas fa-paint-brush"
+    },
+    {
+      "id": "10",
+      "year": "2026",
+      "title": "Startup Exploration Started",
+      "description": "Started exploring startup ideas and entrepreneurship - Learning product thinking, market research, and execution",
+      "category": "Startup",
+      "status": "in-progress",
+      "order": 10,
+      "icon": "fas fa-chart-line"
+    }
+  ],
+  "projects": [
+    {
+      "id": "7a5de08c-943a-4300-b95a-b56e02128597",
+      "title": "KrishiSetu",
+      "description": "KrishiSetu is a technology-driven agriculture platform developed to support farmers by providing easy access to information, resources, and digital solutions. The project focuses on improving productivity and encouraging sustainable farming practices.",
+      "tech": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js",
+        "Express.js",
+        "SQLite",
+        "Git",
+        "GitHub"
+      ],
+      "github": "https://github.com/REVA-grand-challenge-Tech-group/Grand_challenge_project-",
+      "demo": "https://grand-challenge-project.vercel.app/    "
+    }
+  ],
+  "certificates": [
+    {
+      "id": "30a36fac-968a-46f7-83d6-410b15f1d4dc",
+      "title": "Python for Data science ",
+      "issuer": "IBM",
+      "date": "April 2026"
+    }
+  ],
+  "skills": {
+    "programming": [
+      "C",
+      "Python",
+      "SQL"
+    ],
+    "learning": [
+      "Artificial Intelligence (AI)",
+      "Machine Learning",
+      "Data Science",
+      "Web Technologies",
+      "Cloud Computing",
+      "Problem Solving & DSA",
+      "Startup & Product Thinking."
+    ],
+    "tools": [
+      {
+        "name": "GitHub",
+        "icon": "fab fa-github"
+      },
+      {
+        "name": "Docker",
+        "icon": "fab fa-docker"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "fas fa-database"
+      },
+      {
+        "name": "VS Code",
+        "icon": "fas fa-code"
+      },
+      {
+        "name": "Git",
+        "icon": "fab fa-git-alt"
+      },
+      {
+        "name": "Power BI",
+        "icon": "fas fa-chart-line"
+      },
+      {
+        "name": "Kaggle",
+        "icon": "fas fa-chart-simple"
+      },
+      {
+        "name": "AI Tools",
+        "icon": "fas fa-microchip"
+      }
+    ]
+  }
+}

@@ -18,16 +18,20 @@ db.serialize(() => {
     name TEXT,
     tagline TEXT,
     bio TEXT,
-    photo_url TEXT,
-    resume_url TEXT
+    photo_url TEXT DEFAULT '/uploads/profile/profile.jpg',
+    resume_url TEXT,
+    tags TEXT
   )`);
 
   // Journey milestones
   db.run(`CREATE TABLE IF NOT EXISTS journey (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
+    type TEXT, -- 'engineering' or 'startup'
     year TEXT,
     title TEXT,
     description TEXT,
+    status TEXT,
+    icon TEXT,
     "order" INTEGER
   )`);
 
@@ -41,6 +45,7 @@ db.serialize(() => {
     semester INTEGER,
     sgpa TEXT,
     cgpa TEXT,
+    status TEXT,
     marksheet_url TEXT,
     "order" INTEGER
   )`);
@@ -66,6 +71,8 @@ db.serialize(() => {
     demo_url TEXT,
     image_url TEXT,
     learnings TEXT,
+    challenges_faced TEXT,
+    future_improvements TEXT,
     "order" INTEGER
   )`);
 
@@ -93,8 +100,11 @@ db.serialize(() => {
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title TEXT,
     event TEXT,
+    category TEXT,
+    date TEXT,
     year TEXT,
     description TEXT,
+    image_url TEXT,
     "order" INTEGER
   )`);
 

@@ -3,213 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thulasi G T — Portfolio</title>
+  <title>Thulasi G T — The Journey</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ========== HERO SECTION ========== -->
+<!-- Floating Admin Button -->
+<button id="adminFloatingBtn" class="admin-floating-btn"><i class="fas fa-cog"></i></button>
+
+<!-- Admin Edit Modal -->
+<div id="adminEditModal" class="admin-edit-modal">
+  <div class="admin-edit-content">
+    <div class="admin-edit-header"><h3><i class="fas fa-lock"></i> Admin Access</h3><span class="close-modal">&times;</span></div>
+    <div id="adminEditBody"></div>
+  </div>
+</div>
+
+<!-- Modal for Add/Edit -->
+<div id="modal" class="modal"><div class="modal-content"><span class="close">&times;</span><div id="modalBody"></div></div></div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox"><span class="close">&times;</span><img class="lightbox-img" id="lightboxImg" src=""></div>
+
+<!-- HERO SECTION -->
 <section class="hero">
   <div class="hero-grid">
     <div class="hero-content">
-      <h1 class="hero-title">Thulasi<br>G T</h1>
-      <div class="hero-tags">
-        <span>CSIT Student</span>
-        <span>AI Enthusiast</span>
-        <span>Startup Explorer</span>
-        <span>Creative Thinker</span>
-        <span>Future Entrepreneur</span>
-      </div>
-      <p class="hero-bio">I am a CSIT student at REVA University passionate about Artificial Intelligence, Data Science, and entrepreneurship. I enjoy building projects, exploring emerging technologies, and developing solutions that create real-world impact.</p>
-      <div class="hero-stats">
-        <div><strong>9.7</strong> SGPA</div>
-        <div><strong>2nd</strong> Semester</div>
-        <div><strong>REVA</strong> University</div>
-      </div>
+      <h1 class="hero-title">THE<br>JOURNEY.</h1>
+      <p class="hero-bio">Engineering intelligence, building with curiosity, and creating technology that matters. This is my story from curiosity to creation.</p>
       <div class="hero-buttons">
-        <a href="#work" class="btn-primary">View Work</a>
+        <a href="#projects" class="btn-primary">Explore Work</a>
         <a href="#contact" class="btn-secondary">Connect</a>
       </div>
     </div>
-    <div class="hero-photo">
-      <!-- YOUR EXACT PHOTO - UNCHANGED -->
-      <div class="photo-frame">
-        <div class="photo-inner">
-          <img src="assets/profile.jpg" alt="Thulasi G T">
-        </div>
-        <div class="photo-glow"></div>
-      </div>
-      <!-- CONTACT DETAILS BELOW PROFILE PHOTO - WHITE CARD -->
-      <div class="contact-below-photo">
-        <div class="contact-card-white">
-          <div class="contact-item-white">
-            <i class="fab fa-github"></i>
-            <span>github.com/thulasiramegowda</span>
-          </div>
-          <div class="contact-item-white">
-            <i class="fab fa-linkedin-in"></i>
-            <span>linkedin.com/in/thulasi-rame-gowda</span>
-          </div>
-          <div class="contact-item-white">
-            <i class="fab fa-twitter"></i>
-            <span>@thulas_21</span>
-          </div>
-          <div class="contact-item-white">
-            <i class="fas fa-envelope"></i>
-            <span>thulasiramegowda29@gmail.com</span>
-          </div>
-        </div>
-      </div>
+    <div class="hero-photo-section">
+      <div class="photo-frame"><div class="photo-inner"><img src="/uploads/profile/profile.jpg" alt="Thulasi G T" id="profileImg"></div><div class="photo-glow"></div></div>
+      <div class="contact-sidebar" id="socialSidebar"></div>
+      <div class="arrow-wrapper"><svg class="hand-drawn-arrow" viewBox="0 0 60 40"><path d="M5,5 C18,8 30,18 40,28 C48,35 52,37 55,35" stroke="#F5C542" stroke-width="2" fill="none"/><path d="M52,30 L56,36 L50,38" stroke="#F5C542" stroke-width="2" fill="none"/></svg></div>
+      <div class="identity-badges" id="identityBadges"></div>
     </div>
   </div>
 </section>
 
-<!-- ========== ABOUT + SKILLS + TOOLS SECTION ========== -->
+<!-- ABOUT & SKILLS SECTION -->
 <section class="about-skills">
   <div class="wide-container">
     <div class="two-column-grid">
-      <!-- Left Column - About + Skills -->
       <div class="left-col">
-        <div class="about-block">
-          <h2>About Me</h2>
-          <p>I am a CSIT student passionate about Artificial Intelligence, innovation, and entrepreneurship. I enjoy learning through projects, exploring emerging technologies, and continuously improving my technical and creative skills.</p>
-          <p class="quote">"Building my future through technology, curiosity, and continuous learning."</p>
-        </div>
-        
-        <div class="skills-block">
-          <h2>Programming</h2>
-          <div class="skill-chips">
-            <span class="chip">C</span>
-            <span class="chip">Python</span>
-            <span class="chip">SQL</span>
-          </div>
-          
-          <h2 style="margin-top: 1.2rem;">Currently Learning</h2>
-          <div class="skill-chips">
-            <span class="chip">Machine Learning</span>
-            <span class="chip">Artificial Intelligence</span>
-            <span class="chip">Data Science</span>
-            <span class="chip">Generative AI</span>
-            <span class="chip">Web Technologies</span>
-          </div>
-        </div>
+        <div class="about-block"><h2>About Me</h2><p id="aboutBio">Loading...</p><p class="quote">"Building my future through technology, curiosity, and continuous learning."</p></div>
+        <div class="skills-block"><h2>Programming</h2><div class="skill-chips" id="programmingSkills"></div><h2 style="margin-top:1.2rem;">Currently Learning</h2><div class="skill-chips" id="learningSkills"></div></div>
       </div>
-      
-      <!-- Right Column - Tools -->
       <div class="right-col">
-        <div class="tools-block">
-          <h2>Tools & Platforms</h2>
-          <div class="tools-grid">
-            <div class="tool-card"><i class="fab fa-github"></i><span>GitHub</span></div>
-            <div class="tool-card"><i class="fab fa-docker"></i><span>Docker</span></div>
-            <div class="tool-card"><i class="fas fa-database"></i><span>MongoDB</span></div>
-            <div class="tool-card"><i class="fas fa-code"></i><span>VS Code</span></div>
-            <div class="tool-card"><i class="fas fa-chart-line"></i><span>Power BI</span></div>
-            <div class="tool-card"><i class="fas fa-chart-simple"></i><span>Kaggle</span></div>
-            <div class="tool-card"><i class="fab fa-git-alt"></i><span>Git</span></div>
-            <div class="tool-card"><i class="fas fa-microchip"></i><span>AI Tools</span></div>
-          </div>
-        </div>
-        
-        <div class="education-block">
-          <h2>Education</h2>
-          <div class="edu-list">
-            <div class="edu-item">
-              <div class="edu-year">2025 — Present</div>
-              <div><strong>B.Tech CSIT</strong><br>REVA University, Bangalore<br><span class="badge">1st Sem SGPA: 9.7</span></div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-year">2023 — 2025</div>
-              <div><strong>PUC (PCME)</strong><br>Lakshya PU College, Bangalore<br><span class="badge">94%</span></div>
-            </div>
-            <div class="edu-item">
-              <div class="edu-year">2023</div>
-              <div><strong>SSLC</strong><br>Vidyanikethan School, Ramnathpura<br><span class="badge">92%</span></div>
-            </div>
-          </div>
-        </div>
+        <div class="tools-block"><h2>Tools & Platforms</h2><div class="tools-grid" id="toolsGrid"></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== PROJECTS SECTION ========== -->
-<section id="work" class="projects">
+<!-- ACADEMIC PROGRESS -->
+<section id="academics" class="academics">
   <div class="wide-container">
-    <h2>Featured Projects</h2>
-    <div class="projects-grid" id="projectsGrid"></div>
-  </div>
-</section>
-
-<!-- ========== CERTIFICATIONS SECTION ========== -->
-<section class="certifications">
-  <div class="wide-container">
-    <h2>Certifications</h2>
-    <div class="certs-grid" id="certsGrid"></div>
-  </div>
-</section>
-
-<!-- ========== ROADMAP SECTION ========== -->
-<section class="roadmap">
-  <div class="wide-container">
-    <h2>Engineering Roadmap</h2>
-    <div class="roadmap-container">
-      <div class="roadmap-line"></div>
-      <div class="roadmap-items">
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-year">2025</div>
-          <div class="roadmap-card">
-            <h3>Year 1: Foundation</h3>
-            <p>Programming · Academic Excellence · AI Exploration</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-year">2026</div>
-          <div class="roadmap-card">
-            <h3>Year 2: Projects & Growth</h3>
-            <p>Hackathons · Open Source · Data Science</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-year">2027</div>
-          <div class="roadmap-card">
-            <h3>Year 3: Professional Development</h3>
-            <p>Internships · Leadership · Research · Advanced AI</p>
-          </div>
-        </div>
-        <div class="roadmap-item">
-          <div class="roadmap-dot"></div>
-          <div class="roadmap-year">2028</div>
-          <div class="roadmap-card">
-            <h3>Year 4: Career Launch</h3>
-            <p>Industry Readiness · Startup Building · Portfolio Growth</p>
-          </div>
-        </div>
-      </div>
+    <h2>Academic Progress</h2>
+    <div class="academic-stats-premium">
+      <div class="stat-card"><span class="stat-value" id="currentCgpa">9.7</span><span class="stat-label">CGPA</span><span class="stat-edit" onclick="editAcademicStat('cgpa')"><i class="fas fa-pen"></i></span></div>
+      <div class="stat-card"><span class="stat-value" id="currentSem">2nd</span><span class="stat-label">Semester</span><span class="stat-edit" onclick="editAcademicStat('semester')"><i class="fas fa-pen"></i></span></div>
+      <div class="stat-card"><span class="stat-value" id="creditsDone">24</span><span class="stat-label">Credits</span><span class="stat-edit" onclick="editAcademicStat('credits')"><i class="fas fa-pen"></i></span></div>
     </div>
+    <div class="semester-journey" id="semesterJourney"></div>
   </div>
 </section>
 
-<!-- ========== CONTACT SECTION ========== -->
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects"><div class="wide-container"><h2>Featured Projects</h2><div class="projects-grid" id="projectsGrid"></div></div></section>
+
+<!-- CERTIFICATES SECTION -->
+<section id="certificates" class="certifications"><div class="wide-container"><h2>Certifications</h2><div class="certs-grid" id="certsGrid"></div></div></section>
+
+<!-- ENGINEERING JOURNEY -->
+<section id="journey" class="milestone-journey">
+  <div class="wide-container">
+    <h2>Engineering Journey</h2>
+    <div class="milestones-container" id="milestonesContainer"></div>
+    <div class="edit-hint">* Manage milestones from Admin Dashboard</div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION - WITH EMAIL FORM -->
 <section id="contact" class="contact">
   <div class="wide-container">
-    <h2>Connect</h2>
-    <div class="contact-grid" id="contactGrid"></div>
+    <h2>Let's Connect</h2>
+    <div class="contact-wrapper">
+      <div class="contact-cards" id="contactGrid"></div>
+      <div class="contact-form-container">
+        <h3>Send me a message</h3>
+        <form id="emailContactForm" class="email-form">
+          <input type="text" id="senderName" placeholder="Your name" required>
+          <input type="email" id="senderEmail" placeholder="Your email" required>
+          <input type="text" id="messageSubject" placeholder="Subject">
+          <textarea id="senderMessage" rows="4" placeholder="What would you like to talk about?" required></textarea>
+          <button type="submit" class="btn-primary">Send Message →</button>
+          <p id="emailFormStatus" class="form-status"></p>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
 
-<footer class="footer">
-  <p>© 2026 Thulasi G T — Built with curiosity</p>
-</footer>
-
-<!-- Lightbox Modal -->
-<div id="lightbox" class="lightbox"><span class="close">&times;</span><img class="lightbox-img" id="lightboxImg" src=""></div>
+<footer class="footer"><p>© 2026 Thulasi G T — The Journey Continues</p></footer>
 
 <script src="script.js"></script>
+<script src="admin.js"></script>
 </body>
 </html>
