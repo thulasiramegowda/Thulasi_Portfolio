@@ -1,75 +1,89 @@
-# E-Portfolio
+# The Journey
 
-A personal portfolio website showcasing my academic journey, projects, skills, certifications, and career goals.
 
-## About
 
-This portfolio represents my journey as a CSIT student interested in:
+A personal engineering portfolio documenting my academic journey, projects, certifications, skills, and milestones.
 
-* Artificial Intelligence
-* Data Science
-* Machine Learning
-* Technology Innovation
-* Entrepreneurship
 
-## Features
 
-* Responsive design
-* Personal profile section
-* Education timeline
-* Skills and tools showcase
-* Project portfolio
-* Certification gallery
-* Engineering roadmap
-* Contact section
-* Modern black and gold aesthetic UI
+## Live Website
 
-## Tech Stack
 
-* HTML
-* CSS
-* JavaScript
-* Node.js
-* Express.js
-* SQLite
 
-## Projects Featured
+Vercel: https://vercel.com/thulasi21 
 
-### Krishi Setu
 
-Agriculture-focused solution designed to connect technology with farming needs.
 
-### Emergency Resource Allocation System
+## Local Development
 
-A system designed to improve emergency response through efficient resource allocation.
 
-## Education
-
-### B.Tech CSIT
-
-REVA University, Bangalore
-
-### PUC (PCME)
-
-Lakshya PU College, Bangalore
-
-### SSLC
-
-Vidyanikethan School, Ramnathpura
-
-## Run Locally
 
 ```bash
+
 npm install
+
 node server.js
+
 ```
+
+
 
 Open:
 
+
+
+```text
+
 http://localhost:3000
+
+```
+
+
+
+## Features
+
+
+
+* Personal Portfolio
+
+* Academic Tracker
+
+* Projects Showcase
+
+* Certificates Gallery
+
+* Engineering Journey
+
+* Admin Dashboard
+
+* Image Upload Support
+
+
+
+## Tech Stack
+
+
+
+* HTML
+
+* CSS
+
+* JavaScript
+
+* Node.js
+
+* Express.js
+
+* JSON Database
+
+
 
 ## Author
 
+
+
 Thulasi G T
 
-Exploring AI, Innovation, and Entrepreneurship.
+
+
+Building with curiosity. Learning with purpose. Creating with impact.
