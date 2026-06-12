@@ -10,7 +10,7 @@ A personal engineering portfolio documenting my academic journey, projects, cert
 
 
 
-Vercel: https://vercel.com/thulasi21 
+Vercel: https://thulasi-portfolio-21.vercel.app/ 
 
 
 
